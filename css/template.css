@@ -46,3 +46,106 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+a {
+	text-decoration: none;
+}
+
+
+/* Navigation Bar */
+
+.navigation {
+	position: fixed;
+    width:100%;
+    background-color: grey;
+    padding: 0.9rem 1.5625rem;
+    display: flex;
+}
+
+nav a {
+	display: flex;
+	font-size: 1.25rem;
+	margin-left: 1.25rem;
+	align-items: center;
+	color: black;
+}
+
+nav a p {
+	margin-left: 1rem;
+	color: black;
+}
+
+nav .intro {
+	margin-left: 3.75rem;
+}
+
+nav a img {
+    width: 1.875rem;
+}
+
+
+/* Earth Page */
+
+.first-page {
+	width: 100%;
+    height: 46.875rem;
+    background-image: url("../assets/images/earth.jpg");
+    background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: black;
+}
+
+.first-page h1 {
+	color: white;
+	text-align: center;
+	padding-top: 300px;
+	font-size: 100px; 
+}
+
+.first-page p {
+	color: white;
+	text-align: center;
+	font-size: 25px;
+	letter-spacing: 0.15rem;
+    line-height: 2rem;
+}
+
+.last-page {
+	width: 100%;
+    height: 710px;
+    background-image: url("../assets/images/moon.jpg");
+    background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+/* History */
+ 
+.history {
+	background-color: black;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end
+ }
+
+ .history div {
+	 display: flex;
+	 text-align: center;
+	 flex-direction: column;
+	 align-items: center;
+	 width: 20rem;
+ }
+
+ .history div:nth-of-type(2) {
+	 align-self: flex-start;
+ }
+
+.history img {
+	width: 50%;
+}
+
+/* Jules Verne Story */
+
+
+.Jules-Verne img {
+}
