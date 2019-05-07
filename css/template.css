@@ -59,7 +59,8 @@ a {
     width:100%;
     background-color: grey;
     padding: 0.9rem 1.5625rem;
-    display: flex;
+	display: flex;
+	z-index: 1;
 }
 
 nav a {
@@ -179,3 +180,37 @@ nav a img {
 	width: 20rem;
 	padding: 0rem 2rem;
 }
+
+/* Line */
+
+.line {
+	border-left: 6px solid white;
+	height: 177rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -3px;
+	top: 75%;
+  }
+
+  /* Circle */
+
+  .circle1 {
+	height: 25px;
+	width: 25px;
+	background-color: white;
+	border-radius: 50%;
+	position: absolute;
+	left: 49.35%;
+	margin-left: -3px;
+	top: 73%;
+  }
+  .circle2 {
+	height: 25px;
+	width: 25px;
+	background-color: white;
+	border-radius: 50%;
+	position: absolute;
+	left: 49.36%;
+	margin-left: -3px;
+	bottom: -369%;
+  }
