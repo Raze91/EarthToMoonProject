@@ -184,33 +184,33 @@ nav a img {
 /* Line */
 
 .line {
-	border-left: 6px solid white;
+	border-left: 0.375rem solid white;
 	height: 177rem;
 	position: absolute;
 	left: 50%;
-	margin-left: -3px;
+	margin-left: -0.1875rem;
 	top: 75%;
   }
 
   /* Circle */
 
   .circle1 {
-	height: 25px;
-	width: 25px;
+	height: 1.5625rem;
+	width: 1.5625rem;
 	background-color: white;
 	border-radius: 50%;
 	position: absolute;
 	left: 49.35%;
-	margin-left: -3px;
+	margin-left: -0.1875rem;
 	top: 73%;
   }
   .circle2 {
-	height: 25px;
-	width: 25px;
+	height: 1.5625rem;
+	width: 1.5625rem;
 	background-color: white;
 	border-radius: 50%;
 	position: absolute;
 	left: 49.36%;
-	margin-left: -3px;
+	margin-left: -0.1875rem;
 	bottom: -369%;
   }
