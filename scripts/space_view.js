@@ -3,6 +3,8 @@ const earth_texture = loader.load("../assets/images/texture_earth-5400x2700.jpg"
 const moon_texture = loader.load("../assets/images/texture_moon-2048x1024.jpg");
 const stars = loader.load("../assets/images/stars-1920x1080.jpg");
 
+const axis = new THREE.Vector3(0, 1, 0).normalize();
+
 // Scene
 const scene = new THREE.Scene();
 scene.background = stars;
@@ -21,37 +23,46 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.body.appendChild(renderer.domElement);
 
+// Orbit Controls
 
+const controls = new THREE.OrbitControls( camera , renderer.domElement);
 // Earth Mesh
-const earth_geometry = new THREE.SphereGeometry(10, 32, 32);
+const earth_geometry = new THREE.SphereGeometry(15, 32, 32);
 const earth_material = new THREE.MeshPhongMaterial({ map: earth_texture });
 const earth = new THREE.Mesh(earth_geometry, earth_material);
-earth.position.set(0, 0, -20)
+earth.position.set(0, 0, 0)
 
 
 // Moon Mesh
 const moon_geometry = new THREE.SphereGeometry(5, 32, 32);
 const moon_material = new THREE.MeshPhongMaterial({ map: moon_texture });
 const moon = new THREE.Mesh(moon_geometry, moon_material);
+moon.position.set(-30, 0, 0);
 
 
 // Light
-const light = new THREE.AmbientLight(0xffffff, 2, 0, 2);
-light.position.set(30, 10, 10);
+const ambientLight = new THREE.AmbientLight(0xffffff, 1, 0, 2);
 
-moon.position.x = -30
-earth.add(moon);
+const directionnalLight = new THREE.DirectionalLight(0xffffff, 1, 0, 2);
+directionnalLight.position.set(20, 0, 10);
+directionnalLight.castShadow = true;
 
-scene.add(light, earth, moon);
+scene.add(ambientLight, directionnalLight, earth, moon);
 
-function RenderRenderer() {
-    
+function animate() {
+    requestAnimationFrame(animate);
+    render();
+  }
+
+  var quaternion = new THREE.Quaternion();
+  function render() {
     earth.rotation.y += 0.001;
-    
-    moon.rotateX += 0.1    
+    moon.rotation.y += 0.01;
+
+    quaternion.setFromAxisAngle(axis, -0.008);
+    moon.position.applyQuaternion(quaternion);
+
     renderer.render(scene, camera);
+  }
 
-    requestAnimationFrame(RenderRenderer);
-}
-
-RenderRenderer();
+animate();
