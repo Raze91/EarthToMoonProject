@@ -17,7 +17,7 @@ camera.position.set(-1, 10, 70);
 scene.add(camera);
 
 // Renderer
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ antialias: true});
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -26,6 +26,7 @@ document.body.appendChild(renderer.domElement);
 // Orbit Controls
 
 const controls = new THREE.OrbitControls( camera , renderer.domElement);
+
 // Earth Mesh
 const earth_geometry = new THREE.SphereGeometry(15, 32, 32);
 const earth_material = new THREE.MeshPhongMaterial({ map: earth_texture });
@@ -57,7 +58,7 @@ function animate() {
   var quaternion = new THREE.Quaternion();
   function render() {
     earth.rotation.y += 0.001;
-    moon.rotation.y += 0.01;
+    moon.rotation.y += 0.001;
 
     quaternion.setFromAxisAngle(axis, -0.008);
     moon.position.applyQuaternion(quaternion);
