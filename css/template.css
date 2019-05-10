@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Space Mono', monospace;
 }
 ol, ul {
 	list-style: none;
@@ -163,7 +164,7 @@ nav a img {
 
 .last-page div {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	flex-wrap: wrap;
 	height: fit-content;
 	justify-content: center;
