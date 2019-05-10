@@ -56,15 +56,15 @@ a {
 /* Navigation Bar */
 
 
-.navigation a:hover, .active {
+a:hover, .active {
 	color: skyblue;
 }
 
 .navigation {
 	position: fixed;
-    width:100%;
-    background-color: steelblue;
-    padding: 0.9rem 1.5625rem;
+  width:100%;
+  background-color: steelblue;
+  padding: 0.9rem 1.5625rem;
 	display: flex;
 	z-index: 1;
 }
@@ -77,19 +77,9 @@ nav a {
 	color: black;
 }
 
-nav a p {
-	margin-left: 1rem;
-	color: black;
-	margin-right: 3rem;
-}
-
-nav .intro {
-	margin-left: 3.75rem;
-}
-
 nav a img {
-		width: 1.875rem;
-		padding-right: 0.5rem;
+	width: 1.875rem;
+	padding-right: 0.5rem;
 }
 
 
@@ -97,9 +87,9 @@ nav a img {
 
 .first-page {
 	width: 100%;
-    height: 46.875rem;
-    background-image: url("../assets/images/earth.jpg");
-    background-repeat: no-repeat;
+  height: 46.875rem;
+  background-image: url("../assets/images/earth.jpg");
+  background-repeat: no-repeat;
 	background-size: 100%;
 	background-color: black;
 }
@@ -138,7 +128,6 @@ nav a img {
 	flex-direction: column;
 	align-items: center;
 	width: 20rem;
-	/* padding: 8rem 15rem; */
 	padding-top: 5rem;
 	padding-right: 8rem;
 }
@@ -207,25 +196,25 @@ nav a img {
   }
 
 	.transformation-line {
-		transform: translateX(-0.1875);
+	transform: translateX(-0.1875);
 	}
 
   /* Circle */
 	
   .circle1 {
-		height: 1.5625rem;
-		width: 1.5625rem;
-		background-color: white;
-		border-radius: 50%;
-		position: absolute;
-		left: 50vw;
-		margin-left: -0.1875rem;
-		top: 72.5vh;
-		margin-top: 6rem
+	height: 1.5625rem;
+	width: 1.5625rem;
+	background-color: white;
+	border-radius: 50%;
+	position: absolute;
+	left: 50vw;
+	margin-left: -0.1875rem;
+	top: 72.5vh;
+	margin-top: 6rem
 	}
 	
 	.transformation-circle {
-		transform: translateX(-0.6rem)
+	transform: translateX(-0.6rem)
 	}
 
   .circle2 {
@@ -239,70 +228,70 @@ nav a img {
 	bottom: -315vh;
 	}
 	.transformation-circle2 {
-		transform: translateX(-0.6rem)
+	transform: translateX(-0.6rem)
 	}
 	/* Space Trip Page */
 
 	main .trip {
-		color: white;
-		padding-top: 15rem;
-		padding-left: 2rem; 
-		display: flex;
-		width: 90%;
+	color: white;
+	padding-top: 15rem;
+	padding-left: 2rem; 
+	display: flex;
+	width: 90%;
 	}
 
 	main div p {
-		width: 80%
+	width: 80%
 	}
 
 	.brief {
-		font-size: 1.5rem;
+	font-size: 1.5rem;
 	}
 	.slidecontainer {
-		width: 120%; /* Width of the outside container */
-		align-items: center;
-		flex-wrap: wrap;
-		padding-top: 1.5rem;
-		font-size: 1.5rem;
+	width: 120%; /* Width of the outside container */
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 1.5rem;
+	font-size: 1.5rem;
 	}
 
 	.slidecontainer p {
-		padding-top: 0.5rem;
+	padding-top: 0.5rem;
 	}
 	
 	.slider {
-		-webkit-appearance: none;
-		width: 100%;
-		height: 15px;
-		border-radius: 5px;   
-		background: #d3d3d3;
-		outline: none;
-		opacity: 0.7;
-		-webkit-transition: .2s;
-		transition: opacity .2s;
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;   
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
 	}
 	
 	.slider::-webkit-slider-thumb {
-		-webkit-appearance: none;
-		appearance: none;
-		width: 25px;
-		height: 25px;
-		border-radius: 50%; 
-		background: #4CAF50;
-		cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%; 
+	background: #4CAF50;
+	cursor: pointer;
 	}
 	
 	.slider::-moz-range-thumb {
-		width: 25px;
-		height: 25px;
-		border-radius: 50%;
-		background: #4CAF50;
-		cursor: pointer;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #4CAF50;
+	cursor: pointer;
 	}
 
 	.space-trip {
-		height: -webkit-fill-available;
-		background-image: url("../assets/images/earth-moon.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
+	height: -webkit-fill-available;
+	background-image: url("../assets/images/earth-moon.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 	}

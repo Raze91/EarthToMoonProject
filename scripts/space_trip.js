@@ -1,9 +1,9 @@
 const slider = document.getElementById("myRange");
 const speed = document.getElementById("speed");
 const time = document.getElementById('time');
-const transport = document.getElementById('transport');
+const vehicule = document.getElementById('transport');
 
-const vehicules = [
+const list_vehicules = [
     { speed: 10, name: 'un homme à pied' },
     { speed: 65, name: 'un cheval pur-sang' },
     { speed: 325, name: 'une voiture ferrari' },
@@ -17,29 +17,29 @@ const ToMs = 3600000;
 
 speed.innerHTML = slider.value;
 time.innerHTML = msToDate((distance / speed.innerHTML) * ToMs);
-transport.innerHTML = vehicules[0].name;
+vehicule.innerHTML = list_vehicules[0].name;
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function () {
 
-    let actualVehicule = vehicules[0].name;
-    let ecartMin = Math.abs(slider.value - vehicules[0].speed);
+    let actualVehicule = list_vehicules[0].name;
+    let ecartMin = Math.abs(slider.value - list_vehicules[0].speed);
 
-    for (let i = 0; i < vehicules.length; i++) {
+    for (let i = 0; i < list_vehicules.length; i++) {
 
-        let ecart = Math.abs(slider.value - vehicules[i].speed);
+        let ecart = Math.abs(slider.value - list_vehicules[i].speed);
 
         if (ecart < ecartMin) {
 
-            actualSpeed = vehicules[i].speed;
+            actualSpeed = list_vehicules[i].speed;
             ecartMin = ecart;
-            actualVehicule = vehicules[i].name;
+            actualVehicule = list_vehicules[i].name;
         }
     }
 
     speed.innerHTML = this.value;
     time.innerHTML = msToDate((distance / speed.innerHTML) * ToMs);
-    transport.innerHTML = actualVehicule;
+    vehicule.innerHTML = actualVehicule;
 }
 
 function msToDate(milliseconds) {

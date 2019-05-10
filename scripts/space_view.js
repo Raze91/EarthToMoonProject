@@ -2,18 +2,18 @@
 const axis = new THREE.Vector3(0, 1, 0).normalize();
 const loader = new THREE.TextureLoader();
 
-// Scene
+// SCENE
 const scene = new THREE.Scene();
 
 
-// Camera
+// CAMERA
 const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 5000);
 
 camera.position.set(0, 0, 70);
 
 scene.add(camera);
 
-// Renderer
+// RENDERER
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMapEnabled = true;
@@ -22,12 +22,12 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
 document.body.appendChild(renderer.domElement);
 
-// Orbit Controls
+// ORBIT CONTROLS
 
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 
-// Light
+// LIGHTS
 const ambientLight = new THREE.AmbientLight(0xffffff, .5, 0, 2);
 
 
@@ -45,11 +45,11 @@ light.shadow.camera.far = 1000;
 
 scene.add( ambientLight,light);
 
-//////////Earth//////////
+//////////  EARTH  //////////
 let earth;
 
 const earth_texture = loader.load("../assets/images/texture_earth-5400x2700.jpg", function (texture) {
-  // Earth Mesh
+  // EARTH MESH
   const earth_geometry = new THREE.SphereGeometry(15, 32, 32);
   const earth_material = new THREE.MeshPhongMaterial({ map: texture });
   earth = new THREE.Mesh(earth_geometry, earth_material);
@@ -60,7 +60,7 @@ const earth_texture = loader.load("../assets/images/texture_earth-5400x2700.jpg"
 });
 /////////////////////////
 
-//////////Moon//////////
+//////////  MOON  //////////
 let moon;
 const moon_texture = loader.load("../assets/images/texture_moon-2048x1024.jpg", function (texture) {
   // Moon Mesh
@@ -74,14 +74,14 @@ const moon_texture = loader.load("../assets/images/texture_moon-2048x1024.jpg", 
 });
 ////////////////////////
 
-//////////Stars Background//////////
+//////////  STARS BACKGROUND  //////////
 const stars = loader.load("../assets/images/stars-1920x1080.jpg");
 scene.background = stars;
 ////////////////////////////////////
 
 const quaternion = new THREE.Quaternion();
 
-///// Function to animate
+///// FUNCTION TO ANIMATE
 function animate() {
   if (earth && moon) {
     earth.rotation.y += 0.001;
