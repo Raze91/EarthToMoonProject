@@ -55,11 +55,8 @@ a {
 
 /* Navigation Bar */
 
-.active {
-	color: skyblue;
-}
 
-.navigation a:hover {
+.navigation a:hover, .active {
 	color: skyblue;
 }
 
@@ -91,7 +88,8 @@ nav .intro {
 }
 
 nav a img {
-    width: 1.875rem;
+		width: 1.875rem;
+		padding-right: 0.5rem;
 }
 
 
@@ -246,7 +244,7 @@ nav a img {
 	/* Space Trip Page */
 
 	main .trip {
-		color: black;
+		color: white;
 		padding-top: 15rem;
 		padding-left: 2rem; 
 		display: flex;
@@ -257,11 +255,15 @@ nav a img {
 		width: 80%
 	}
 
+	.brief {
+		font-size: 1.5rem;
+	}
 	.slidecontainer {
-		width: 100%; /* Width of the outside container */
+		width: 120%; /* Width of the outside container */
 		align-items: center;
 		flex-wrap: wrap;
-		padding-top: 1.5rem
+		padding-top: 1.5rem;
+		font-size: 1.5rem;
 	}
 
 	.slidecontainer p {
@@ -296,4 +298,11 @@ nav a img {
 		border-radius: 50%;
 		background: #4CAF50;
 		cursor: pointer;
+	}
+
+	.space-trip {
+		height: -webkit-fill-available;
+		background-image: url("../assets/images/earth-moon.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
