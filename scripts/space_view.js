@@ -6,9 +6,9 @@ const scene = new THREE.Scene();
 
 
 // Camera
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 5000);
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 5000);
 
-camera.position.set(-1, 10, 60);
+camera.position.set(0, 0, 70);
 
 scene.add(camera);
 
@@ -22,9 +22,6 @@ document.body.appendChild(renderer.domElement);
 // Orbit Controls
 
 const controls = new THREE.OrbitControls( camera , renderer.domElement);
-
-
-
 
 
 // Light
