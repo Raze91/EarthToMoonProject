@@ -55,10 +55,18 @@ a {
 
 /* Navigation Bar */
 
+.active {
+	color: skyblue;
+}
+
+.navigation a:hover {
+	color: skyblue;
+}
+
 .navigation {
 	position: fixed;
     width:100%;
-    background-color: grey;
+    background-color: steelblue;
     padding: 0.9rem 1.5625rem;
 	display: flex;
 	z-index: 1;

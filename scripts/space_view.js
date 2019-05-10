@@ -12,7 +12,7 @@ scene.background = stars;
 // Camera
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 5000);
 
-camera.position.set(-1, 10, 70);
+camera.position.set(-1, 10, 60);
 
 scene.add(camera);
 
@@ -38,14 +38,14 @@ earth.position.set(0, 0, 0)
 const moon_geometry = new THREE.SphereGeometry(5, 32, 32);
 const moon_material = new THREE.MeshPhongMaterial({ map: moon_texture });
 const moon = new THREE.Mesh(moon_geometry, moon_material);
-moon.position.set(-30, 0, 0);
+moon.position.set(-40, 0, 0);
 
 
 // Light
-const ambientLight = new THREE.AmbientLight(0xffffff, 1, 0, 2);
+const ambientLight = new THREE.AmbientLight(0xffffff, .5, 0, 2);
 
-const directionnalLight = new THREE.DirectionalLight(0xffffff, 1, 0, 2);
-directionnalLight.position.set(20, 0, 10);
+const directionnalLight = new THREE.DirectionalLight(0xffffff, 2, 0, 2);
+directionnalLight.position.set(50, 0, 30);
 directionnalLight.castShadow = true;
 
 scene.add(ambientLight, directionnalLight, earth, moon);

@@ -4,12 +4,12 @@ const time = document.getElementById('time');
 const transport = document.getElementById('transport');
 
 const vehicules = [
-    { speed: 10, name: 'homme à pied' },
-    { speed: 65, name: 'cheval pur-sang' },
-    { speed: 325, name: 'voiture ferrari' },
-    { speed: 740, name: 'avion jet' },
-    { speed: 1185, name: 'avion de ligne' },
-    { speed: 5500, name: 'fusée Apollo 11' }
+    { speed: 10, name: 'un homme à pied' },
+    { speed: 65, name: 'un cheval pur-sang' },
+    { speed: 325, name: 'une voiture ferrari' },
+    { speed: 740, name: 'un avion jet' },
+    { speed: 1185, name: 'un avion de ligne' },
+    { speed: 5500, name: 'une fusée Apollo 11' }
 ]
 
 const distance = 384400;
