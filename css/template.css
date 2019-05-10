@@ -277,7 +277,7 @@ nav a img {
 	width: 25px;
 	height: 25px;
 	border-radius: 50%; 
-	background: #4CAF50;
+	background: cornflowerblue;
 	cursor: pointer;
 	}
 	
@@ -294,4 +294,9 @@ nav a img {
 	background-image: url("../assets/images/earth-moon.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	}
+
+	h1 {
+		font-family: 'IBM Plex Mono', monospace;
+		font-size: 3rem;
 	}
