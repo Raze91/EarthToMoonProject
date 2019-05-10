@@ -188,11 +188,11 @@ nav a img {
 
 .line {
 	border-left: 0.375rem solid white;
-	height: 325vh;
+	height: 320vh;
 	position: absolute;
 	left: 50vw;
 	margin-left: -0.1875rem;
-	top: 87vh;
+	top: 95vh;
   }
 
 	.transformation-line {
@@ -209,7 +209,7 @@ nav a img {
 	position: absolute;
 	left: 50vw;
 	margin-left: -0.1875rem;
-	top: 72.5vh;
+	top: 79vh;
 	margin-top: 6rem
 	}
 	

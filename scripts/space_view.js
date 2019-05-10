@@ -43,7 +43,7 @@ light.shadowDarkness = 0.5;
 light.shadow.camera.near = 1;
 light.shadow.camera.far = 1000;
 
-scene.add( ambientLight,light);
+scene.add(ambientLight, light);
 
 //////////  EARTH  //////////
 let earth;
